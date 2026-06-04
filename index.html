@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Euphoria - Modern Banking SaaS</title>
+      <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+      <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+      <link rel="stylesheet" href="css/owl.carousel.min.css">
+      <link rel="stylesheet" href="css/style.css">
+   </head>
+   <body>
+      <header class="style-header">
+         <div class="custom-container header-flex">
+            <div class="logo">
+               <a href="index.html" title="logo"><img src="images/logo.png" alt=""></a>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+               <i class="fas fa-bars"></i>
+            </div>
+            <nav class="nav-container hidden-mobile">
+               <ul class="nav-links">
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Pricing</a></li>
+                  <li><a href="#">Company</a></li>
+                  <li><a href="#">Resources</a></li>
+               </ul>
+            </nav>
+            <div class="nav-buttons hidden-mobile">
+               <a href="#" class="btn-signin">Sign in</a>
+               <a href="#" class="btn-brand-green">Register</a>
+            </div>
+         </div>
+      </header>
+      <section class="hero-section text-center">
+         <div class="bg-grid"></div>
+         <div class="custom-container relative-z">
+            <div class="badge-container">
+               <span class="badge-new">New</span>
+               <span class="badge-text">Payment cards upgraded</span>
+            </div>
+            <h1 class="hero-title text-white">Cross-border payment <br>made easy.</h1>
+            <p class="hero-subtitle text-secondary">We help individuals and businesses to securely send and receive money globally, without the bank fees.</p>
+            <div class="hero-ctas">
+               <a href="#" class="btn-brand-green btn-lg">Create account <i class="fas fa-arrow-right ms-2"></i></a>
+               <a href="#" class="btn-light btn-lg"><i class="fas fa-play me-2 text-white "></i>Watch Tutorial</a>
+            </div>
+            <div class="dashboard-wrapper layout-flex align-end">
+               <div class="float-col">
+                  <div class="mini-card shadow">
+                     <p class="text-muted small-label">Total balance</p>
+                     <div class="card-inline-flex">
+                        <h2 class="fw-bold fs-4">$9,647.00</h2>
+                        <span class="percentage-badge">+8.50%</span>
+                     </div>
+                  </div>
+                  <div class="mini-card shadow card-flex-row">
+                     <div class="icon-circle text-success"><i class="fas fa-dollar-sign"></i></div>
+                     <div>
+                        <p class="text-muted small-label">Received</p>
+                        <h3 class="fw-bold fs-5">6790.67 EUR</h3>
+                     </div>
+                  </div>
+                  <div class="floating-badge badge-sync"><i class="fas fa-sync-alt"></i></div>
+               </div>
+               <div class="main-market-card shadow-lg">
+                  <h4 class="fw-bold text-center">Currency Markets</h4>
+                  <p class="text-muted text-center small-label">Latest prices of top crypto and fiat assets.</p>
+                  <form id="currency-form">
+                     <div class="form-group">
+                        <label class="text-muted fw-bold text-uppercase small-label">Amount</label>
+                        <input type="number" id="amount" class="custom-form-control" value="1000" min="1" required>
+                     </div>
+                     <div class="select-row-bg">
+                        <div class="select-flag-group">
+                           <span id="from-flag" class="fs-5">🇺🇸</span>
+                           <select id="from-currency" class="custom-select">
+                              <option value="USD" data-flag="🇺🇸" selected>USD</option>
+                              <option value="EUR" data-flag="🇪🇺">EUR</option>
+                              <option value="GBP" data-flag="🇬🇧">GBP</option>
+                              <option value="INR" data-flag="🇮🇳">INR</option>
+                           </select>
+                        </div>
+                        <div class="fw-bold text-secondary">$10,589.78</div>
+                     </div>
+                     <div class="swap-divider">
+                        <div id="swap-btn">
+                           <i class="fas fa-exchange-alt fa-rotate-90"></i>
+                        </div>
+                     </div>
+                     <div class="select-row-bg">
+                        <div class="select-flag-group">
+                           <span id="to-flag" class="fs-5">🇪🇺</span>
+                           <select id="to-currency" class="custom-select">
+                              <option value="USD" data-flag="🇺🇸">USD</option>
+                              <option value="EUR" data-flag="🇪🇺" selected>EUR</option>
+                              <option value="GBP" data-flag="🇬🇧">GBP</option>
+                              <option value="INR" data-flag="🇮🇳">INR</option>
+                           </select>
+                        </div>
+                        <div class="fw-bold text-secondary">€10,589.78</div>
+                     </div>
+                     <div class="conversion-result style-result-alert" style="display:none;">
+                        <p id="result-text">1000 USD = 920.50 EUR</p>
+                     </div>
+                     <button type="submit" class="btn-dark-submit">Convert</button>
+                  </form>
+               </div>
+               <div class="float-col">
+                  <div class="mini-card shadow">
+                     <p class="text-muted small-label">Net Income</p>
+                     <div class="card-inline-flex">
+                        <h3 class="fw-bold fs-4">$234.98K</h3>
+                        <div class="arrow-up-circle"><i class="fas fa-arrow-up"></i></div>
+                     </div>
+                  </div>
+                  <div class="mini-card shadow card-flex-row">
+                     <div class="user-avatars">
+                        <span class="avatar-1"></span>
+                        <span class="avatar-2"></span>
+                     </div>
+                     <div>
+                        <h3 class="fw-bold fs-5">124.89K+</h3>
+                        <p class="text-muted small-label">Trusted Users</p>
+                     </div>
+                  </div>
+                  <div class="floating-badge badge-search"><i class="fas fa-search-dollar"></i></div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="partners-section text-center">
+         <div class="custom-container">
+            <h2 class="fw-bold fs-2">Our Recent Clients & Partners</h2>
+         </div>
+         <div class="marquee-wrapper">
+            <div class="marquee-track">
+               <div class="logo-item"><img src="images/logo-1.png" alt="Partner 1"></div>
+               <div class="logo-item"><img src="images/logo-2.png" alt="Partner 2"></div>
+               <div class="logo-item"><img src="images/logo-3.png" alt="Partner 3"></div>
+               <div class="logo-item"><img src="images/logo-4.png" alt="Partner 4"></div>
+               <div class="logo-item"><img src="images/logo-5.png" alt="Partner 5"></div>
+               <div class="logo-item"><img src="images/logo-6.png" alt="Partner 6"></div>
+               <div class="logo-item"><img src="images/logo-7.png" alt="Partner 7"></div>
+               <div class="logo-item"><img src="images/logo-8.png" alt="Partner 8"></div>
+               <div class="logo-item"><img src="images/logo-9.png" alt="Partner 9"></div>
+               <div class="logo-item"><img src="images/logo-10.png" alt="Partner 10"></div>
+               <div class="logo-item"><img src="images/logo-1.png" alt="Partner 1"></div>
+               <div class="logo-item"><img src="images/logo-2.png" alt="Partner 2"></div>
+               <div class="logo-item"><img src="images/logo-3.png" alt="Partner 3"></div>
+               <div class="logo-item"><img src="images/logo-4.png" alt="Partner 4"></div>
+               <div class="logo-item"><img src="images/logo-5.png" alt="Partner 5"></div>
+            </div>
+         </div>
+         <div class="custom-container">
+            <p class="text-secondary">Join 4,000+ companies already growing</p>
+         </div>
+      </section>
+      <section class="features-section text-center" id="features">
+         <div class="custom-container">
+            <div class="pill-badge-center">
+               <span class="border-pill-green"><i class="fas fa-circle icon-dot"></i> Features</span>
+            </div>
+            <h2 class="fw-bold text-dark display-5">Banking Reimagined for the Future You</h2>
+            <p class="text-secondary block-desc">Trust us to deliver cutting-edge innovation, transparency, and personalized service, all designed to help you achieve financial freedom</p>
+            <div class="custom-grid-3x2">
+               <div class="feature-box">
+                  <div class="icon-box"><i class="fas fa-laptop-medical"></i></div>
+                  <h3 class="fw-bold fs-4">Instant Account Setup</h3>
+                  <p class="text-muted">Customers can set up a bank account in minutes</p>
+               </div>
+               <div class="feature-box">
+                  <div class="icon-box"><i class="fas fa-money-bill-transfer"></i></div>
+                  <h3 class="fw-bold fs-4">Real-Time Payments</h3>
+                  <p class="text-muted">Enables instant money transfers, both domestically and internationally</p>
+               </div>
+               <div class="feature-box">
+                  <div class="icon-box"><i class="fas fa-mobile-screen-button"></i></div>
+                  <h3 class="fw-bold fs-4">Mobile Banking</h3>
+                  <p class="text-muted">Full-featured mobile app that allows users to manage their finances</p>
+               </div>
+               <div class="feature-box">
+                  <div class="icon-box"><i class="fas fa-piggy-bank"></i></div>
+                  <h3 class="fw-bold fs-4">Automated Savings</h3>
+                  <p class="text-muted">Round up purchases or set regular transfers into a savings account</p>
+               </div>
+               <div class="feature-box">
+                  <div class="icon-box"><i class="fas fa-wallet"></i></div>
+                  <h3 class="fw-bold fs-4">AI-Powered Budgeting</h3>
+                  <p class="text-muted">AI tools analyze spending patterns and provide personalized budgeting</p>
+               </div>
+               <div class="feature-box">
+                  <div class="icon-box"><i class="fas fa-credit-card"></i></div>
+                  <h3 class="fw-bold fs-4">Virtual Credit Cards</h3>
+                  <p class="text-muted">Generate virtual cards instantly for online shopping</p>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="about-section" id="about">
+         <div class="custom-container">
+            <div class="layout-flex align-center justify-between">
+               <div class="about-content text-start">
+                  <div class="mb-3">
+                     <span class="border-pill-green"><i class="fas fa-circle icon-dot"></i> Limitless currency options</span>
+                  </div>
+                  <h2 class="fw-bold text-dark display-4 about-title">One account for <br>90+ currencies <br>worldwide.</h2>
+                  <p class="text-muted about-desc">Our platform allows you to send, receive, and convert currencies seamlessly in real-time, all while saving on fees.</p>
+                  <ul class="about-list">
+                     <li>
+                        <div class="check-icon"><i class="fas fa-check"></i></div>
+                        Convert between currencies instantly.
+                     </li>
+                     <li>
+                        <div class="check-icon"><i class="fas fa-check"></i></div>
+                        Simple and intuitive platform for managing.
+                     </li>
+                     <li>
+                        <div class="check-icon"><i class="fas fa-check"></i></div>
+                        Manage your currencies anytime, anywhere.
+                     </li>
+                  </ul>
+                  <a href="#" class="btn-brand-green btn-lg">Get Started now <i class="fas fa-arrow-right ms-2"></i></a>
+               </div>
+               <div class="about-cards-side flex-end-lg">
+                  <div class="cards-display-container">
+                     <div class="map-dots-overlay"></div>
+                     <div class="cascading-card card-shift-left">
+                        <div class="flex-row-gap">
+                           <div class="empty-flag-kwd"></div>
+                           <div>
+                              <h3 class="fw-bold">KWD</h3>
+                              <p class="text-muted small-label">Kuwaiti Dinar</p>
+                           </div>
+                        </div>
+                        <div class="text-end">
+                           <h4 class="fw-bold">5,780 KWD</h4>
+                           <p class="text-muted small-label">18,865.80 USD</p>
+                        </div>
+                     </div>
+                     <div class="cascading-card card-main-center">
+                        <div class="flex-row-gap">
+                           <span class="fs-2">🇪🇺</span>
+                           <div>
+                              <h4 class="fw-bold">EUR</h4>
+                              <p class="text-muted small-label">EURO</p>
+                           </div>
+                        </div>
+                        <div class="text-end">
+                           <h4 class="fw-bold">3,456 EUR</h4>
+                           <p class="text-muted small-label">3,751.80 USD</p>
+                        </div>
+                     </div>
+                     <div class="cascading-card card-main-center">
+                        <div class="flex-row-gap">
+                           <span class="fs-2">🇺🇸</span>
+                           <div>
+                              <h4 class="fw-bold">USD</h4>
+                              <p class="text-muted small-label">United States Dollar</p>
+                           </div>
+                        </div>
+                        <div class="text-end">
+                           <h4 class="fw-bold">3,657 USD</h4>
+                           <p class="text-muted small-label">5,809.56 BTD</p>
+                        </div>
+                     </div>
+                     <div class="cascading-card card-shift-right opacity-50">
+                        <div class="card-space-between">
+                           <div>
+                              <h4 class="fw-bold text-muted">KYD</h4>
+                              <p class="text-muted small-label">Cayman Islands Dollar</p>
+                           </div>
+                           <div class="text-end">
+                              <h4 class="fw-bold text-muted">1,345 KYD</h4>
+                              <p class="text-muted small-label">1,617.67 USD</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="get-started-section" id="get-started">
+         <div class="custom-container">
+            <div class="layout-flex align-center justify-between">
+               <div class="get-started-mockup-side order-2-mobile">
+                  <div class="get-started-mockup">
+                     <img src="images/currency.jpg" alt="">
+                  </div>
+               </div>
+               <div class="get-started-content text-start ps-lg-5">
+                  <div class="mb-3">
+                     <span class="border-pill-green"><i class="fas fa-circle icon-dot"></i> Smart Payment</span>
+                  </div>
+                  <h2 class="fw-bold text-dark display-4 start-title">Our payment <br>system is easy to <br>start using.</h2>
+                  <p class="text-muted start-desc">Its easy setup ensures businesses can start using it effortlessly, making financial management more straightforward and reliable.</p>
+                  <div class="mini-grid-2x2">
+                     <div class="start-mini-card">
+                        <div class="start-icon-box"><i class="fas fa-shield-halved"></i></div>
+                        <p class="text-dark small-label">Encryption ensures your payments are safe.</p>
+                     </div>
+                     <div class="start-mini-card">
+                        <div class="start-icon-box"><i class="fas fa-mobile-screen-button"></i></div>
+                        <p class="text-dark small-label">Manage payments on the go with our mobile app.</p>
+                     </div>
+                     <div class="start-mini-card">
+                        <div class="start-icon-box"><i class="fas fa-rotate"></i></div>
+                        <p class="text-dark small-label">Pay and receive any currencies effortlessly.</p>
+                     </div>
+                     <div class="start-mini-card">
+                        <div class="start-icon-box"><i class="fas fa-headset"></i></div>
+                        <p class="text-dark small-label">Our team is available around the clock</p>
+                     </div>
+                  </div>
+                  <a href="#" class="btn-brand-green btn-lg">Get Started now <i class="fas fa-arrow-right ms-2"></i></a>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="stats-section text-center" id="stats">
+         <div class="custom-container">
+            <div class="layout-flex justify-center flex-wrap gap-24">
+               <div class="stat-box">
+                  <h2 class="stat-number">234<span class="stat-suffix">M</span></h2>
+                  <p class="stat-text">Supporting multiple currencies for users.</p>
+               </div>
+               <div class="stat-box">
+                  <h2 class="stat-number">768<span class="stat-suffix">K</span></h2>
+                  <p class="stat-text">Gaining new users every single month.</p>
+               </div>
+               <div class="stat-box">
+                  <h2 class="stat-number">5.0<span class="stat-suffix"><i class="fas fa-star metric-star"></i></span></h2>
+                  <p class="stat-text">High star ratings from satisfied users.</p>
+               </div>
+               <div class="stat-box">
+                  <h2 class="stat-number">$8.8<span class="stat-suffix">B</span></h2>
+                  <p class="stat-text">Generating increased revenue consistently</p>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="tab-pricing-section text-center" id="pricing-plan">
+         <div class="bg-grid"></div>
+         <div class="custom-container relative-z">
+            <div class="mb-3">
+               <span class="border-pill-green"><i class="fas fa-circle icon-dot"></i> Pricing Plan</span>
+            </div>
+            <h2 class="fw-bold text-white display-5 plan-main-title">Select a plan that will empower your <br class="hidden-mobile">business growth</h2>
+            <p class="text-secondary plan-sub-desc">Each package includes personalized consultation and revisions to guarantee your satisfaction</p>
+            <div class="layout-flex justify-center mb-5">
+               <div class="pricing-tabs-wrapper">
+                  <button type="button" class="tab-btn active-tab" id="monthly-tab">Monthly</button>
+                  <button type="button" class="tab-btn" id="yearly-tab">Yearly</button>
+               </div>
+            </div>
+            <div class="pricing-cards-container">
+               <div class="dark-pricing-card">
+                  <div>
+                     <h3 class="fw-bold text-white fs-4">Starter Plan</h3>
+                     <p class="text-secondary small-label mb-4">Perfect for larger organizations with advanced needs</p>
+                     <div class="price-display text-white">
+                        <h2 class="fw-bold plan-price" data-monthly="0" data-yearly="0">$0</h2>
+                        <span class="text-secondary small-label">/ per month</span>
+                     </div>
+                     <div class="card-features-box">
+                        <ul class="style-list text-white">
+                           <li><i class="fas fa-check-circle"></i> <span>Account Aggregation</span></li>
+                           <li><i class="fas fa-check-circle"></i> <span>Expense Tracking</span></li>
+                           <li><i class="fas fa-check-circle"></i> <span>Basic Analytics System</span></li>
+                           <li><i class="fas fa-check-circle"></i> <span>Budgeting Tools</span></li>
+                           <li><i class="fas fa-check-circle"></i> <span>24/7 Customer Support</span></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <button class="btn-select-plan">Select This Plan</button>
+               </div>
+               <div class="dark-pricing-card">
+                  <div>
+                     <h3 class="fw-bold text-white fs-4">Growth Plan</h3>
+                     <p class="text-secondary small-label mb-4">Ideal for growing startups and mid-sized companies</p>
+                     <div class="price-display text-white">
+                        <h2 class="fw-bold plan-price" data-monthly="49" data-yearly="39">$49</h2>
+                        <span class="text-secondary small-label">/ per month</span>
+                     </div>
+                     <div class="card-features-box">
+                        <ul class="style-list text-white">
+                           <li><i class="fas fa-check-circle"></i> <span>Everything in Starter Plan</span></li>
+                           <li><i class="fas fa-check-circle"></i> <span>Advanced Budgeting Tools</span></li>
+                           <li><i class="fas fa-check-circle"></i> <span>Customizable Dashboards</span></li>
+                           <li><i class="fas fa-check-circle"></i> <span>Transaction Insights</span></li>
+                           <li><i class="fas fa-check-circle"></i> <span>Enhanced Security</span></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <button class="btn-select-plan">Select This Plan</button>
+               </div>
+               <div class="dark-pricing-card">
+                  <div>
+                     <h3 class="fw-bold text-white fs-4">Business Plan</h3>
+                     <p class="text-secondary small-label mb-4">Perfect for larger organizations with advanced needs</p>
+                     <div class="price-display text-white">
+                        <h2 class="fw-bold plan-price" data-monthly="99" data-yearly="79">$99</h2>
+                        <span class="text-secondary small-label">/ per month</span>
+                     </div>
+                     <div class="card-features-box">
+                        <ul class="style-list text-white">
+                           <li><i class="fas fa-check-circle"></i> <span>Everything in Growth Plan</span></li>
+                           <li><i class="fas fa-check-circle"></i> <span>Investment Tracking</span></li>
+                           <li><i class="fas fa-check-circle"></i> <span>Integration Services</span></li>
+                           <li><i class="fas fa-check-circle"></i> <span>24/7 VIP Support</span></li>
+                           <li><i class="fas fa-check-circle"></i> <span>Premium Security</span></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <button class="btn-select-plan">Select This Plan</button>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="seamless-banking-section text-dark" id="seamless-banking">
+         <div class="custom-container">
+            <div class="layout-flex align-center justify-between">
+               <div class="custom-col-6">
+                  <div class="seamless-mockup-bg">
+                     <div class="mockup-dots-overlay"></div>
+                     <div class="floating-trusted-badge bg-white shadow-sm">
+                        <div class="stars-row text-warning"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <div class="badge-flex-align">
+                           <div class="stacked-circles">
+                              <span class="circle-s1"></span>
+                              <span class="circle-s2"></span>
+                              <span class="circle-s3"></span>
+                           </div>
+                           <div>
+                              <h2 class="fw-bold text-dark m-0">124,89K+</h2>
+                              <p class="text-muted m-0" style="font-size:11px;">Trusted Users</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="reach-analytics-card bg-white shadow-sm">
+                        <div class="analytics-header">
+                           <h2 class="fw-bold text-dark m-0">Reach <i class="far fa-question-circle text-muted"></i></h2>
+                        </div>
+                        <p class="text-dark fw-bold" style="font-size: 14px; margin-bottom:12px;">Account reached</p>
+                        <div class="custom-analytics-scroll">
+                           <div class="scroll-item bg-light">
+                              <div class="item-meta-row">
+                                 <span class="fw-semibold text-dark">Followers</span>
+                                 <span class="custom-progress-badge">54.1%</span>
+                              </div>
+                              <div class="custom-progress-track">
+                                 <div class="custom-progress-bar" style="width: 54.1%"></div>
+                              </div>
+                           </div>
+                           <div class="scroll-item bg-light">
+                              <div class="item-meta-row">
+                                 <span class="fw-semibold text-dark">Non-followers</span>
+                                 <span class="custom-progress-badge">18.1%</span>
+                              </div>
+                              <div class="custom-progress-track">
+                                 <div class="custom-progress-bar" style="width: 18.1%"></div>
+                              </div>
+                           </div>
+                           <div class="scroll-item bg-light">
+                              <div class="item-meta-row">
+                                 <span class="fw-semibold text-dark">Global Merchants</span>
+                                 <span class="custom-progress-badge">62.5%</span>
+                              </div>
+                              <div class="custom-progress-track">
+                                 <div class="custom-progress-bar" style="width: 62.5%"></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="custom-col-6 ps-lg-5">
+                  <div class="mb-3">
+                     <span class="border-pill-green"><i class="fas fa-circle icon-dot"></i> Seamless Banking</span>
+                  </div>
+                  <h2 class="fw-bold text-dark display-4">Smart Banking for <br>a Digital World</h2>
+                  <p class="text-secondary mb-5">Our Fintech banking service revolutionizes the way you manage your money, offering seamless, secure, and smart solutions for all your financial needs.</p>
+                  <div class="custom-jquery-accordion" id="custom-accordion">
+                     <div class="accordion-box active-item">
+                        <div class="accordion-trigger">
+                           <span class="acc-num-circle">1</span>
+                           <span class="trigger-text">Personalized Financial Insights</span>
+                           <i class="fas fa-chevron-down acc-arrow"></i>
+                        </div>
+                        <div class="accordion-content" style="display: block;">
+                           Receive tailored insights and recommendations based on your spending habits, helping you make smarter financial decisions.
+                        </div>
+                     </div>
+                     <div class="accordion-box">
+                        <div class="accordion-trigger">
+                           <span class="acc-num-circle">2</span>
+                           <span class="trigger-text">Bill Payment Reminders</span>
+                           <i class="fas fa-chevron-down acc-arrow"></i>
+                        </div>
+                        <div class="accordion-content">
+                           Never miss a due date again. Get automated smart alerts and scheduled drafts for electricity, water, and other subscription services before late charges apply.
+                        </div>
+                     </div>
+                     <div class="accordion-box">
+                        <div class="accordion-trigger">
+                           <span class="acc-num-circle">3</span>
+                           <span class="trigger-text">Peer-to-Peer Transfers</span>
+                           <i class="fas fa-chevron-down acc-arrow"></i>
+                        </div>
+                        <div class="accordion-content">
+                           Send money instantly to friends and family with zero fees. Splitting bills, dinner checks, or rent payments has never been this smooth and effortless.
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="testimonials-section text-center" id="testimonials">
+         <div class="custom-container">
+            <div class="mb-3">
+               <span class="border-pill-green"><i class="fas fa-circle icon-dot"></i> Testimonials</span>
+            </div>
+            <h2 class="fw-bold text-dark display-5">Real Feedback from Satisfied Customers</h2>
+            <p class="text-secondary mx-auto plan-sub-desc">Discover what real clients have to say about how our services have helped them achieve their goals and manage their finances effortlessly.</p>
+            <div class="jquery-custom-slider" id="testimonial-slider">
+               <div class="slider-container-track">
+                  <div class="custom-slide active-slide">
+                     <div class="layout-flex justify-center gap-24 padding-track">
+                        <div class="testimonial-box">
+                           <div>
+                              <h3 class="fw-bold text-dark fs-5">Brian Ramirez</h3>
+                              <p class="text-muted small-label">Financial Analyst</p>
+                              <p class="testimonial-quote text-secondary">"The banking app has completely transformed how I manage my finances. It's user-friendly and efficient!"</p>
+                           </div>
+                           <div class="stars-row text-warning"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                        <div class="testimonial-box mobile-hide">
+                           <div>
+                              <h4 class="fw-bold text-dark fs-5">David Anderson</h4>
+                              <p class="text-muted small-label">Marketing Manager</p>
+                              <p class="testimonial-quote text-secondary">"I love the instant transfer feature! It makes sending money to friends and family a breeze."</p>
+                           </div>
+                           <div class="stars-row text-warning"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                        <div class="testimonial-box hidden-tablet">
+                           <div>
+                              <h4 class="fw-bold text-dark fs-5">James Carter</h4>
+                              <p class="text-muted small-label">Graphic Designer</p>
+                              <p class="testimonial-quote text-secondary">"The budgeting tools are fantastic. They've really helped me keep track of my spending!"</p>
+                           </div>
+                           <div class="stars-row text-warning"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="custom-slide">
+                     <div class="layout-flex justify-center gap-24 padding-track">
+                        <div class="testimonial-box">
+                           <div>
+                              <h4 class="fw-bold text-dark fs-5">Jane Doe</h4>
+                              <p class="text-muted small-label">Data Scientist</p>
+                              <p class="testimonial-quote text-secondary">"I've never felt more secure about my online banking. The security features are top-notch!"</p>
+                           </div>
+                           <div class="stars-row text-warning"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                        <div class="testimonial-box mobile-hide">
+                           <div>
+                              <h4 class="fw-bold text-dark fs-5">John Mitchell</h4>
+                              <p class="text-muted small-label">Product Manager</p>
+                              <p class="testimonial-quote text-secondary">"I appreciate the transparency in fees. No hidden charges mean I can manage my finances with confidence."</p>
+                           </div>
+                           <div class="stars-row text-warning"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                        <div class="testimonial-box hidden-tablet">
+                           <div>
+                              <h4 class="fw-bold text-dark fs-5">Daniel Walker</h4>
+                              <p class="text-muted small-label">Web Developer</p>
+                              <p class="testimonial-quote text-secondary">"Automated savings has changed my life! I'm saving more than I ever thought possible."</p>
+                           </div>
+                           <div class="stars-row text-warning"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <button class="custom-control-btn prev-slide" type="button"><i class="fas fa-chevron-left text-white"></i></button>
+               <button class="custom-control-btn next-slide" type="button"><i class="fas fa-chevron-right text-white"></i></button>
+            </div>
+         </div>
+      </section>
+      <section class="cta-banner-section text-center" id="cta-banner">
+         <div class="bg-grid"></div>
+         <div class="custom-container relative-z">
+            <div class="trust-badge-wrapper">
+               <div class="stars-counter text-warning">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  <span class="text-white small-label font-bold ms-1">4.9/5</span>
+               </div>
+               <div class="stacked-users">
+                  <span class="user-s1"></span>
+                  <span class="user-s2"></span>
+                  <span class="user-s3"></span>
+                  <span class="user-s4"></span>
+                  <span class="user-s5">+100K</span>
+               </div>
+               <p class="text-secondary label-cta-desc">Over 100K+ Entrepreneurs, and business choose us</p>
+            </div>
+            <h2 class="fw-bold text-white display-4 cta-main-title">Empowering Your Financial Freedom</h2>
+            <p class="text-secondary cta-desc">Trust us to deliver cutting-edge innovation, transparency, and personalized service, all designed to help you achieve financial freedom</p>
+            <div class="layout-flex justify-center">
+               <a href="#" class="btn-brand-green btn-lg cta-btn-animate">Get Started now <i class="fas fa-arrow-right ms-2 arrow-icon"></i></a>
+            </div>
+         </div>
+      </section>
+      <footer class="footer-section text-white">
+         <div class="bg-grid"></div>
+         <div class="custom-container relative-z pt-4">
+            <div class="layout-flex justify-between footer-gap">
+               <div class="footer-col-desc">
+                  <div class="logo mb-4">
+                     <h2 class="m-0 fw-bold text-white fs-3"><i class="fas fa-sun text-success me-2"></i>Euphoria</h2>
+                  </div>
+                  <p class="text-secondary footer-tagline">Empowering Your Projects, Enhancing Your Success, Every Step of the Way.</p>
+                  <div class="social-flex-group">
+                     <a href="#" class="social-circle-btn"><i class="fab fa-facebook-f"></i></a>
+                     <a href="#" class="social-circle-btn"><i class="fab fa-linkedin-in"></i></a>
+                     <a href="#" class="social-circle-btn"><i class="fab fa-instagram"></i></a>
+                     <a href="#" class="social-circle-btn"><i class="fab fa-twitter"></i></a>
+                  </div>
+               </div>
+               <div class="footer-links-col">
+                  <h3 class="fw-bold tracking-wide text-uppercase mb-4">Home</h3>
+                  <ul class="footer-links">
+                     <li><a href="#">Product Features</a></li>
+                     <li><a href="#">Benefits</a></li>
+                     <li><a href="#">How To Use</a></li>
+                     <li><a href="#">Key Features</a></li>
+                     <li><a href="#">Pricing</a></li>
+                  </ul>
+               </div>
+               <div class="footer-links-col">
+                  <h3 class="fw-bold tracking-wide text-uppercase mb-4">App</h3>
+                  <ul class="footer-links">
+                     <li><a href="#">Mobile App</a></li>
+                     <li><a href="#">Desktop App</a></li>
+                     <li><a href="#">How To Use</a></li>
+                  </ul>
+               </div>
+               <div class="footer-links-col">
+                  <h3 class="fw-bold tracking-wide text-uppercase mb-4">All Pages</h3>
+                  <ul class="footer-links">
+                     <li><a href="#">Home</a></li>
+                     <li><a href="#">App</a></li>
+                     <li><a href="#">Blogs</a></li>
+                     <li><a href="#">Contact</a></li>
+                     <li><a href="#">Privacy Policy</a></li>
+                  </ul>
+               </div>
+               <div class="footer-col-download">
+                  <div class="app-download-box">
+                     <h3 class="fw-bold mb-3">Download our App</h3>
+                     <div class="store-buttons-stack">
+                        <a href="#" class="store-btn">
+                           <i class="fab fa-google-play fs-4"></i>
+                           <div>
+                              <span class="store-small-txt">Get It On</span>
+                              <span class="store-bold-txt">Google Play</span>
+                           </div>
+                        </a>
+                        <a href="#" class="store-btn">
+                           <i class="fab fa-apple fs-3"></i>
+                           <div>
+                              <span class="store-small-txt">Download on the</span>
+                              <span class="store-bold-txt">App Store</span>
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="layout-flex justify-between align-center text-secondary" style="font-size: 14px;">
+               <div class="copyright-txt">© 2024 Euphoria. All rights reserved.</div>
+               <div class="bottom-privacy-links">
+                  <a href="#">Privacy Policy</a>
+                  <a href="#">Terms of Services</a>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <script src="js/jquery-4.0.0.min.js"></script>
+      <script src="js/owl.carousel.js"></script>
+      <script src="js/custom.js"></script>
+   </body>
+</html>
