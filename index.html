@@ -69,13 +69,13 @@
                   <p class="text-muted text-center small-label">Latest prices of top crypto and fiat assets.</p>
                   <form id="currency-form">
                      <div class="form-group">
-                        <label class="text-muted fw-bold text-uppercase small-label">Amount</label>
+                        <label Kant="amount" class="text-muted fw-bold text-uppercase small-label">Amount</label>
                         <input type="number" id="amount" class="custom-form-control" value="1000" min="1" required>
                      </div>
                      <div class="select-row-bg">
                         <div class="select-flag-group">
                            <span id="from-flag" class="fs-5">🇺🇸</span>
-                           <select id="from-currency" class="custom-select">
+                           <select id="from-currency" class="custom-select" aria-label="From Currency">
                               <option value="USD" data-flag="🇺🇸" selected>USD</option>
                               <option value="EUR" data-flag="🇪🇺">EUR</option>
                               <option value="GBP" data-flag="🇬🇧">GBP</option>
@@ -92,7 +92,7 @@
                      <div class="select-row-bg">
                         <div class="select-flag-group">
                            <span id="to-flag" class="fs-5">🇪🇺</span>
-                           <select id="to-currency" class="custom-select">
+                           <select id="to-currency" class="custom-select" aria-label="To Currency">
                               <option value="USD" data-flag="🇺🇸">USD</option>
                               <option value="EUR" data-flag="🇪🇺" selected>EUR</option>
                               <option value="GBP" data-flag="🇬🇧">GBP</option>
@@ -584,8 +584,8 @@
                      </div>
                   </div>
                </div>
-               <button class="custom-control-btn prev-slide" type="button"><i class="fas fa-chevron-left text-white"></i></button>
-               <button class="custom-control-btn next-slide" type="button"><i class="fas fa-chevron-right text-white"></i></button>
+               <button class="custom-control-btn prev-slide" type="button" aria-label="Previous Slide"><i class="fas fa-chevron-left text-white"></i></button>
+               <button class="custom-control-btn next-slide" type="button" aria-label="next Slide"><i class="fas fa-chevron-right text-white"></i></button>
             </div>
          </div>
       </section>
@@ -623,10 +623,10 @@
                   </div>
                   <p class="text-secondary footer-tagline">Empowering Your Projects, Enhancing Your Success, Every Step of the Way.</p>
                   <div class="social-flex-group">
-                     <a href="#" class="social-circle-btn"><i class="fab fa-facebook-f"></i></a>
-                     <a href="#" class="social-circle-btn"><i class="fab fa-linkedin-in"></i></a>
-                     <a href="#" class="social-circle-btn"><i class="fab fa-instagram"></i></a>
-                     <a href="#" class="social-circle-btn"><i class="fab fa-twitter"></i></a>
+                     <a href="#" class="social-circle-btn" title="facebook"><i class="fab fa-facebook-f"></i></a>
+                     <a href="#" class="social-circle-btn" title="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                     <a href="#" class="social-circle-btn" title="instagram"><i class="fab fa-instagram"></i></a>
+                     <a href="#" class="social-circle-btn" title="twitter"><i class="fab fa-twitter"></i></a>
                   </div>
                </div>
                <div class="footer-links-col">
